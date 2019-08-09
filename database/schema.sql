@@ -1,3 +1,6 @@
+
+--Create a Mysql database called notetaker
+
 DROP DATABASE IF EXISTS notetaker_db;
 CREATE DATABASE notetaker_db;
 
