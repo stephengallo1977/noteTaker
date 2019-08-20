@@ -25,11 +25,11 @@ connection.config.typeCast = function(field, next) {
   return next();
 };
 
-connection.connect(function(err){
-  if(err) throw err;
+// connection.connect(function(err){
+//   if(err) throw err;
 
-  console.log("Connected as id: " + connection.threadId)
-})
+//   console.log("Connected as id: " + connection.threadId)
+// })
 
 //This will export the connection to additional parts of app
 module.exports = connection;
