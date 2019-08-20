@@ -3,6 +3,8 @@
 var express = require('express');
 var app = express();
 var PORT = process.env.PORT || 8080;
+var htmlroutes = require('./routes/htmlRoutes');
+var apiroutes = require('./routes/apiRoutes');
 
 // Here is where the middleware is loaded
 
@@ -14,8 +16,7 @@ app.use(express.static("public"));
 
 // The api routes will store and retrieve the data from the data array. This is the same as fetching data from a database and saving to it
 // The html files or static routes are the views of app and make requests to the API routes to fetch and update the data
-var htmlroutes = require('./routes/htmlRoutes');
-var apiroutes = require('./routes/apiRoutes');
+
 app.use(apiroutes)
 app.use(htmlroutes)
 
